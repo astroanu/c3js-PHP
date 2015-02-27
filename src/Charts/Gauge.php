@@ -8,6 +8,26 @@ class Gauge implements \JsonSerializable {
 
 	private $data = [];
 
+	public function setWidth($width)
+	{
+		$this->data['width'] = $width;
+	}
+
+	public function setUnits($units)
+	{
+		$this->data['units'] = $units;
+	}
+
+	public function setMin($min)
+	{
+		$this->data['min'] = $min;
+	}
+
+	public function setExpand($expand)
+	{
+		$this->data['expand'] = $expand;
+	}
+
 	public function setLabelVisibility($visibility)
 	{
 		if (!isset($this->data['label'])) {

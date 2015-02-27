@@ -38,9 +38,19 @@ class Data implements \JsonSerializable {
 	{
 		$this->data['type'] = $type;
 
-		$reflectionClass = new \reflectionClass('Astroanu\C3jsPHP\Charts\\' . ucfirst($type));
+		if (!is_null($options)) {
+			$className = 'Astroanu\C3jsPHP\Charts\\' . ucfirst($type);
 
-		return $reflectionClass;
+			$reflectionClass = new $className;
+
+			if (!$options instanceOf $reflectionClass) {
+				throw new \Exception ('Chart type "' . $type . '"" required options class type of "' . get_class($reflectionClass)
+					. '". Type "' . get_class($options) . '"" given.');
+			}
+
+			//parent::setChartOptions($type, $options);
+		}
+
 	}
 
 	public function setNames($names)
