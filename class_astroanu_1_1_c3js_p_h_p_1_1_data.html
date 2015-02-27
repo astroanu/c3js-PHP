@@ -8,6 +8,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -67,6 +75,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="functions.html"><span>Data&#160;Fields</span></a></li>
     </ul>
   </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('class_astroanu_1_1_c3js_p_h_p_1_1_data.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -81,11 +104,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="namespace_astroanu.html">Astroanu</a></li><li class="navelem"><a class="el" href="namespace_astroanu_1_1_c3js_p_h_p.html">C3jsPHP</a></li><li class="navelem"><a class="el" href="class_astroanu_1_1_c3js_p_h_p_1_1_data.html">Data</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -94,14 +112,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Data Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="dynheader">
-Inheritance diagram for Data:</div>
-<div class="dyncontent">
- <div class="center">
-  <img src="class_astroanu_1_1_c3js_p_h_p_1_1_data.png" usemap="#Data_map" alt=""/>
-  <map id="Data_map" name="Data_map">
-</map>
- </div></div>
+
+<p>Inherits JsonSerializable.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -153,10 +165,7 @@ Data Fields</h2></td></tr>
 <tr class="memitem:a7558919fbb0fb344f1bf353a452f6019"><td class="memItemLeft" align="right" valign="top">const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_astroanu_1_1_c3js_p_h_p_1_1_data.html#a7558919fbb0fb344f1bf353a452f6019">TYPE_GAUGE</a> = 'gauge'</td></tr>
 <tr class="separator:a7558919fbb0fb344f1bf353a452f6019"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p>Definition at line <a class="el" href="_data_8php_source.html#l00003">3</a> of file <a class="el" href="_data_8php_source.html">Data.php</a>.</p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a2b32cac8b854e2a010208d0f87f567f8"></a>
 <div class="memitem">
 <div class="memproto">
@@ -169,8 +178,6 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_data_8php_source.html#l00095">95</a> of file <a class="el" href="_data_8php_source.html">Data.php</a>.</p>
 
 </div>
 </div>
@@ -188,8 +195,6 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_data_8php_source.html#l00075">75</a> of file <a class="el" href="_data_8php_source.html">Data.php</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="aaf77099d89a4cb76ea47d904a2322fa1"></a>
@@ -205,8 +210,6 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_data_8php_source.html#l00085">85</a> of file <a class="el" href="_data_8php_source.html">Data.php</a>.</p>
 
 </div>
 </div>
@@ -224,8 +227,6 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_data_8php_source.html#l00028">28</a> of file <a class="el" href="_data_8php_source.html">Data.php</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="a61b6758a5c606446739793c0f47be276"></a>
@@ -241,8 +242,6 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_data_8php_source.html#l00019">19</a> of file <a class="el" href="_data_8php_source.html">Data.php</a>.</p>
 
 </div>
 </div>
@@ -260,8 +259,6 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_data_8php_source.html#l00056">56</a> of file <a class="el" href="_data_8php_source.html">Data.php</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="a78b133d53c42c6e1f592e54ae0554cd7"></a>
@@ -277,8 +274,6 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_data_8php_source.html#l00080">80</a> of file <a class="el" href="_data_8php_source.html">Data.php</a>.</p>
 
 </div>
 </div>
@@ -306,8 +301,6 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_data_8php_source.html#l00037">37</a> of file <a class="el" href="_data_8php_source.html">Data.php</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="a0b6d0c531aa70b1811b166299edab8d0"></a>
@@ -323,8 +316,6 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_data_8php_source.html#l00090">90</a> of file <a class="el" href="_data_8php_source.html">Data.php</a>.</p>
 
 </div>
 </div>
@@ -342,8 +333,6 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_data_8php_source.html#l00066">66</a> of file <a class="el" href="_data_8php_source.html">Data.php</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="aea8dafc98a11c0b6640ceae96e4526e1"></a>
@@ -360,8 +349,6 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_data_8php_source.html#l00061">61</a> of file <a class="el" href="_data_8php_source.html">Data.php</a>.</p>
-
 </div>
 </div>
 <h2 class="groupheader">Field Documentation</h2>
@@ -375,8 +362,6 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_data_8php_source.html#l00008">8</a> of file <a class="el" href="_data_8php_source.html">Data.php</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="a6a886f12a70fc8e0ef36697141928457"></a>
@@ -388,8 +373,6 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_data_8php_source.html#l00009">9</a> of file <a class="el" href="_data_8php_source.html">Data.php</a>.</p>
 
 </div>
 </div>
@@ -403,8 +386,6 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_data_8php_source.html#l00010">10</a> of file <a class="el" href="_data_8php_source.html">Data.php</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="ad59370849ea829dc6d13bca7099426ec"></a>
@@ -416,8 +397,6 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_data_8php_source.html#l00011">11</a> of file <a class="el" href="_data_8php_source.html">Data.php</a>.</p>
 
 </div>
 </div>
@@ -431,8 +410,6 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_data_8php_source.html#l00014">14</a> of file <a class="el" href="_data_8php_source.html">Data.php</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="a7558919fbb0fb344f1bf353a452f6019"></a>
@@ -444,8 +421,6 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_data_8php_source.html#l00015">15</a> of file <a class="el" href="_data_8php_source.html">Data.php</a>.</p>
 
 </div>
 </div>
@@ -459,8 +434,6 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_data_8php_source.html#l00005">5</a> of file <a class="el" href="_data_8php_source.html">Data.php</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="abcf1af4ce22dd2b901bbc5d3964bcdea"></a>
@@ -472,8 +445,6 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_data_8php_source.html#l00013">13</a> of file <a class="el" href="_data_8php_source.html">Data.php</a>.</p>
 
 </div>
 </div>
@@ -487,8 +458,6 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_data_8php_source.html#l00012">12</a> of file <a class="el" href="_data_8php_source.html">Data.php</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="ad2c35f044565e5385b1374da6a228e03"></a>
@@ -500,8 +469,6 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_data_8php_source.html#l00006">6</a> of file <a class="el" href="_data_8php_source.html">Data.php</a>.</p>
 
 </div>
 </div>
@@ -515,19 +482,21 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_data_8php_source.html#l00007">7</a> of file <a class="el" href="_data_8php_source.html">Data.php</a>.</p>
-
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/<a class="el" href="_data_8php_source.html">Data.php</a></li>
+<li>D:/www/laravel-dev/Lib/astroanu/c3js-php/src/<a class="el" href="_data_8php.html">Data.php</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 27 2015 13:08:14 for c3js-PHP by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.9.1
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespace_astroanu.html">Astroanu</a></li><li class="navelem"><a class="el" href="namespace_astroanu_1_1_c3js_p_h_p.html">C3jsPHP</a></li><li class="navelem"><a class="el" href="class_astroanu_1_1_c3js_p_h_p_1_1_data.html">Data</a></li>
+    <li class="footer">Generated on Fri Feb 27 2015 13:21:53 for c3js-PHP by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
+  </ul>
+</div>
 </body>
 </html>

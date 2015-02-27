@@ -8,6 +8,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -65,6 +73,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     </ul>
   </div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('files.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -85,31 +107,38 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <div class="textblock">Here is a list of all files with brief descriptions:</div><div class="directory">
-<div class="levels">[detail level <span onclick="javascript:toggleLevel(1);">1</span><span onclick="javascript:toggleLevel(2);">2</span><span onclick="javascript:toggleLevel(3);">3</span>]</div><table class="directory">
-<tr id="row_0_" class="even"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_0_" class="arrow" onclick="toggleFolder('0_')">&#9660;</span><span id="img_0_" class="iconfopen" onclick="toggleFolder('0_')">&#160;</span><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html" target="_self">src</a></td><td class="desc"></td></tr>
-<tr id="row_0_0_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span id="arr_0_0_" class="arrow" onclick="toggleFolder('0_0_')">&#9660;</span><span id="img_0_0_" class="iconfopen" onclick="toggleFolder('0_0_')">&#160;</span><a class="el" href="dir_cc69650dde0416dbab2c1971ec6656c5.html" target="_self">Charts</a></td><td class="desc"></td></tr>
-<tr id="row_0_0_0_" class="even"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><a href="_area_8php_source.html"><span class="icondoc"></span></a><a class="el" href="_area_8php.html" target="_self">Area.php</a></td><td class="desc"></td></tr>
-<tr id="row_0_0_1_"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><a href="_bar_8php_source.html"><span class="icondoc"></span></a><a class="el" href="_bar_8php.html" target="_self">Bar.php</a></td><td class="desc"></td></tr>
-<tr id="row_0_0_2_" class="even"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><a href="_donut_8php_source.html"><span class="icondoc"></span></a><a class="el" href="_donut_8php.html" target="_self">Donut.php</a></td><td class="desc"></td></tr>
-<tr id="row_0_0_3_"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><a href="_gauge_8php_source.html"><span class="icondoc"></span></a><a class="el" href="_gauge_8php.html" target="_self">Gauge.php</a></td><td class="desc"></td></tr>
-<tr id="row_0_0_4_" class="even"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><a href="_line_8php_source.html"><span class="icondoc"></span></a><a class="el" href="_line_8php.html" target="_self">Line.php</a></td><td class="desc"></td></tr>
-<tr id="row_0_0_5_"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><a href="_pie_8php_source.html"><span class="icondoc"></span></a><a class="el" href="_pie_8php.html" target="_self">Pie.php</a></td><td class="desc"></td></tr>
-<tr id="row_0_1_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><a href="_axis_8php_source.html"><span class="icondoc"></span></a><a class="el" href="_axis_8php.html" target="_self">Axis.php</a></td><td class="desc"></td></tr>
-<tr id="row_0_2_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><a href="_chart_8php_source.html"><span class="icondoc"></span></a><a class="el" href="_chart_8php.html" target="_self">Chart.php</a></td><td class="desc"></td></tr>
-<tr id="row_0_3_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><a href="_data_8php_source.html"><span class="icondoc"></span></a><a class="el" href="_data_8php.html" target="_self">Data.php</a></td><td class="desc"></td></tr>
-<tr id="row_0_4_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><a href="_grid_8php_source.html"><span class="icondoc"></span></a><a class="el" href="_grid_8php.html" target="_self">Grid.php</a></td><td class="desc"></td></tr>
-<tr id="row_0_5_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><a href="_legend_8php_source.html"><span class="icondoc"></span></a><a class="el" href="_legend_8php.html" target="_self">Legend.php</a></td><td class="desc"></td></tr>
-<tr id="row_0_6_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><a href="_point_8php_source.html"><span class="icondoc"></span></a><a class="el" href="_point_8php.html" target="_self">Point.php</a></td><td class="desc"></td></tr>
-<tr id="row_0_7_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><a href="_region_8php_source.html"><span class="icondoc"></span></a><a class="el" href="_region_8php.html" target="_self">Region.php</a></td><td class="desc"></td></tr>
-<tr id="row_0_8_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><a href="_tooltip_8php_source.html"><span class="icondoc"></span></a><a class="el" href="_tooltip_8php.html" target="_self">Tooltip.php</a></td><td class="desc"></td></tr>
+<div class="levels">[detail level <span onclick="javascript:toggleLevel(1);">1</span><span onclick="javascript:toggleLevel(2);">2</span><span onclick="javascript:toggleLevel(3);">3</span><span onclick="javascript:toggleLevel(4);">4</span><span onclick="javascript:toggleLevel(5);">5</span><span onclick="javascript:toggleLevel(6);">6</span><span onclick="javascript:toggleLevel(7);">7</span>]</div><table class="directory">
+<tr id="row_0_" class="even"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_0_" class="arrow" onclick="toggleFolder('0_')">&#9660;</span><span id="img_0_" class="iconfopen" onclick="toggleFolder('0_')">&#160;</span><a class="el" href="dir_7606878ebc1f2e5a92af593a51fa7d10.html" target="_self">laravel-dev</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span id="arr_0_0_" class="arrow" onclick="toggleFolder('0_0_')">&#9660;</span><span id="img_0_0_" class="iconfopen" onclick="toggleFolder('0_0_')">&#160;</span><a class="el" href="dir_2afaa30e0fe2d36ca69b14688d26f8b7.html" target="_self">Lib</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_0_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span id="arr_0_0_0_" class="arrow" onclick="toggleFolder('0_0_0_')">&#9660;</span><span id="img_0_0_0_" class="iconfopen" onclick="toggleFolder('0_0_0_')">&#160;</span><a class="el" href="dir_ee8d6afb7503ecd8071415df1cd7f06a.html" target="_self">astroanu</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_0_0_"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span id="arr_0_0_0_0_" class="arrow" onclick="toggleFolder('0_0_0_0_')">&#9660;</span><span id="img_0_0_0_0_" class="iconfopen" onclick="toggleFolder('0_0_0_0_')">&#160;</span><a class="el" href="dir_c0f5690702b47f19ec953e5d93a9716a.html" target="_self">c3js-php</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_0_0_0_" class="even"><td class="entry"><span style="width:64px;display:inline-block;">&#160;</span><span id="arr_0_0_0_0_0_" class="arrow" onclick="toggleFolder('0_0_0_0_0_')">&#9660;</span><span id="img_0_0_0_0_0_" class="iconfopen" onclick="toggleFolder('0_0_0_0_0_')">&#160;</span><a class="el" href="dir_14ebd896e71c04d56e5a4fe825b062ca.html" target="_self">src</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_0_0_0_0_"><td class="entry"><span style="width:80px;display:inline-block;">&#160;</span><span id="arr_0_0_0_0_0_0_" class="arrow" onclick="toggleFolder('0_0_0_0_0_0_')">&#9660;</span><span id="img_0_0_0_0_0_0_" class="iconfopen" onclick="toggleFolder('0_0_0_0_0_0_')">&#160;</span><a class="el" href="dir_4284523c8e53ef3689677e677fc71432.html" target="_self">Charts</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_0_0_0_0_0_" class="even"><td class="entry"><span style="width:112px;display:inline-block;">&#160;</span><span class="icondoc"></span><a class="el" href="_area_8php.html" target="_self">Area.php</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_0_0_0_0_1_"><td class="entry"><span style="width:112px;display:inline-block;">&#160;</span><span class="icondoc"></span><a class="el" href="_bar_8php.html" target="_self">Bar.php</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_0_0_0_0_2_" class="even"><td class="entry"><span style="width:112px;display:inline-block;">&#160;</span><span class="icondoc"></span><a class="el" href="_donut_8php.html" target="_self">Donut.php</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_0_0_0_0_3_"><td class="entry"><span style="width:112px;display:inline-block;">&#160;</span><span class="icondoc"></span><a class="el" href="_gauge_8php.html" target="_self">Gauge.php</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_0_0_0_0_4_" class="even"><td class="entry"><span style="width:112px;display:inline-block;">&#160;</span><span class="icondoc"></span><a class="el" href="_line_8php.html" target="_self">Line.php</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_0_0_0_0_5_"><td class="entry"><span style="width:112px;display:inline-block;">&#160;</span><span class="icondoc"></span><a class="el" href="_pie_8php.html" target="_self">Pie.php</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_0_0_0_1_" class="even"><td class="entry"><span style="width:96px;display:inline-block;">&#160;</span><span class="icondoc"></span><a class="el" href="_axis_8php.html" target="_self">Axis.php</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_0_0_0_2_"><td class="entry"><span style="width:96px;display:inline-block;">&#160;</span><span class="icondoc"></span><a class="el" href="_chart_8php.html" target="_self">Chart.php</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_0_0_0_3_" class="even"><td class="entry"><span style="width:96px;display:inline-block;">&#160;</span><span class="icondoc"></span><a class="el" href="_data_8php.html" target="_self">Data.php</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_0_0_0_4_"><td class="entry"><span style="width:96px;display:inline-block;">&#160;</span><span class="icondoc"></span><a class="el" href="_grid_8php.html" target="_self">Grid.php</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_0_0_0_5_" class="even"><td class="entry"><span style="width:96px;display:inline-block;">&#160;</span><span class="icondoc"></span><a class="el" href="_legend_8php.html" target="_self">Legend.php</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_0_0_0_6_"><td class="entry"><span style="width:96px;display:inline-block;">&#160;</span><span class="icondoc"></span><a class="el" href="_point_8php.html" target="_self">Point.php</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_0_0_0_7_" class="even"><td class="entry"><span style="width:96px;display:inline-block;">&#160;</span><span class="icondoc"></span><a class="el" href="_region_8php.html" target="_self">Region.php</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_0_0_0_8_"><td class="entry"><span style="width:96px;display:inline-block;">&#160;</span><span class="icondoc"></span><a class="el" href="_tooltip_8php.html" target="_self">Tooltip.php</a></td><td class="desc"></td></tr>
 </table>
 </div><!-- directory -->
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 27 2015 13:08:14 for c3js-PHP by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.9.1
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated on Fri Feb 27 2015 13:21:53 for c3js-PHP by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
+  </ul>
+</div>
 </body>
 </html>
