@@ -16,17 +16,31 @@ class Data implements \JsonSerializable {
 
 	private $data = [];
 
-	public function setKeysValue($fields)
+	public function setKeysX($field)
 	{
-		if(!isset($this->data['keys'])){
+		if (!isset($this->data['keys'])) {
 			$this->data['keys'] = [];
 		}
+
+		$this->data['keys']['x'] = $field;
+	}
+
+	public function setKeysValue($fields)
+	{
+		if (!isset($this->data['keys'])) {
+			$this->data['keys'] = [];
+		}
+
 		$this->data['keys']['value'] = $fields;
 	}
 
-	public function setType($type)
+	public function setType($type, $options = null)
 	{
 		$this->data['type'] = $type;
+
+		$reflectionClass = new \reflectionClass('Astroanu\C3jsPHP\Charts\\' . ucfirst($type));
+
+		return $reflectionClass;
 	}
 
 	public function setNames($names)
