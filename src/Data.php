@@ -51,11 +51,7 @@ class Data implements \JsonSerializable {
 
 	public function setX($x)
 	{
-		if (is_array($x)) {
-			$this->data['x'] = $x;
-		} else {
-			$this->data['xs'] = $x;
-		}
+		$this->data['x'] = $x;
 	}
 
 	public function setColumns($data)

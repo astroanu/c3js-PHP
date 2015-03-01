@@ -5,6 +5,60 @@ class Chart {
 	private $options = [];
 
     /**
+    * Set custom color pattern
+    *
+    * @param array $pattern
+    *
+    * @return Chart
+    *
+    */
+    public function setColorPattern($pattern)
+    {
+        if (!isset($this->data['color'])) {
+            $this->data['color'] = [];
+        }
+
+        $this->options['size']['pattern'] = $pattern;
+        return $this;
+    }
+
+    /**
+    * Set Height of the chart
+    *
+    * @param integer $Height
+    *
+    * @return Chart
+    *
+    */
+    public function setSizeHeight($height)
+    {
+        if (!isset($this->data['size'])) {
+            $this->data['size'] = [];
+        }
+
+        $this->options['size']['height'] = $height;
+        return $this;
+    }
+
+    /**
+    * Set width of the chart
+    *
+    * @param integer $width
+    *
+    * @return Chart
+    *
+    */
+    public function setSizeWidth($width)
+    {
+        if (!isset($this->data['size'])) {
+            $this->data['size'] = [];
+        }
+
+        $this->options['size']['width'] = $width;
+        return $this;
+    }
+
+    /**
      * Attach a Gauge object to the Chart
      *
      * @param Charts\Gauge $gauge
