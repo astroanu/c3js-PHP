@@ -9,9 +9,6 @@ class Area implements \JsonSerializable {
 		$this->data['zerobased'] = $zerobased;
 	}
 
-	/**
-     * @ignore
-     */
 	public function JsonSerialize()
     {
         return $this->data;

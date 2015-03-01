@@ -29,9 +29,9 @@ class Chart {
     }
 
     /**
-    * Set Height of the chart
+    * Set height of the chart
     *
-    * @param integer $Height
+    * @param integer $height
     *
     * @return Chart
     *
@@ -80,7 +80,7 @@ class Chart {
     /**
      * Attach a Donut object to the Chart
      *
-     * @param Charts\Donut $gauge
+     * @param Charts\Donut $donut
      *
      * @return Chart
      */
@@ -93,7 +93,7 @@ class Chart {
     /**
      * Attach a Pie object to the Chart
      *
-     * @param Charts\Pie $gauge
+     * @param Charts\Pie $pie
      *
      * @return Chart
      */	
@@ -106,7 +106,7 @@ class Chart {
     /**
      * Attach a Bar object to the Chart
      *
-     * @param Charts\Bar $gauge
+     * @param Charts\Bar $bar
      *
      * @return Chart
      */		
@@ -119,7 +119,7 @@ class Chart {
     /**
      * Attach a Area object to the Chart
      *
-     * @param Charts\Area $gauge
+     * @param Charts\Area $area
      *
      * @return Chart
      */	
@@ -132,7 +132,7 @@ class Chart {
     /**
      * Attach a Line object to the Chart
      *
-     * @param Charts\Line $gauge
+     * @param Charts\Line $line
      *
      * @return Chart
      */	
@@ -145,7 +145,7 @@ class Chart {
     /**
      * Attach a Point object to the Chart
      *
-     * @param Charts\Point $gauge
+     * @param Charts\Point $point
      *
      * @return Chart
      */	
@@ -158,7 +158,7 @@ class Chart {
     /**
      * HTML element selector to bind to
      *
-     * @param String $gauge
+     * @param String $selector
      *
      * @return Chart
      */	
@@ -171,7 +171,7 @@ class Chart {
     /**
      * Attach a Grid object to the Chart
      *
-     * @param Charts\Grid $gauge
+     * @param Charts\Grid $grid
      *
      * @return Chart
      */	
@@ -184,7 +184,7 @@ class Chart {
     /**
      * Attach a Data object to the Chart
      *
-     * @param Charts\Data $gauge
+     * @param Charts\Data $data
      *
      * @return Chart
      */	
@@ -197,7 +197,7 @@ class Chart {
     /**
      * Attach a Axis object to the Chart
      *
-     * @param Charts\Axis $gauge
+     * @param Charts\Axis $axis
      *
      * @return Chart
      */
