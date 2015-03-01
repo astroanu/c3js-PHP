@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Astroanu\\C3jsPHP\\Axis' => $baseDir . '/../src/Axis.php',
+    'Astroanu\\C3jsPHP\\Callback' => $baseDir . '/../src/Callback.php',
     'Astroanu\\C3jsPHP\\Chart' => $baseDir . '/../src/Chart.php',
     'Astroanu\\C3jsPHP\\Charts\\Area' => $baseDir . '/../src/Charts/Area.php',
     'Astroanu\\C3jsPHP\\Charts\\Bar' => $baseDir . '/../src/Charts/Bar.php',

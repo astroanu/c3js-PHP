@@ -2,7 +2,13 @@
 
 class Chart {
 
-	private $options = [];
+    private $options = [];
+
+    public function setOnInit(Callback $callback)
+    {
+        $this->oninit = $callback;
+        return $this;
+    }
 
     /**
     * Set custom color pattern
@@ -218,7 +224,7 @@ class Chart {
 		} else {
 			echo json_encode($this->options, JSON_NUMERIC_CHECK);
 		}
-
+        
 		echo ');';
 	}
 }
