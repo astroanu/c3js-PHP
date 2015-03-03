@@ -8,6 +8,32 @@ class Axis implements \JsonSerializable {
 
 	private $data = [];
 
+	public function setyTickFormat($format)
+	{
+		if (!isset($this->data['y'])) {
+			$this->data['y'] = [];
+		}
+
+		if (!isset($this->data['y']['tick'])) {
+			$this->data['y']['tick'] = [];
+		}
+
+		$this->data['y']['tick']['format'] = $format;
+	}
+
+	public function setXTickFormat($format)
+	{
+		if (!isset($this->data['x'])) {
+			$this->data['x'] = [];
+		}
+
+		if (!isset($this->data['x']['tick'])) {
+			$this->data['x']['tick'] = [];
+		}
+
+		$this->data['x']['tick']['format'] = $format;
+	}
+
 	public function setXTickCullingMax($max)
 	{
 		if (!isset($this->data['x'])) {
