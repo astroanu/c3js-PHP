@@ -10,6 +10,17 @@ class Chart {
         return $this;
     }
 
+    
+    public function setSubChartVisibility($visibility)
+    {
+        if (!isset($this->data['subchart'])) {
+            $this->data['subchart'] = [];
+        }
+
+        $this->options['subchart']['show'] = $visibility;
+        return $this;
+    }
+
     /**
     * Set custom color pattern
     *

@@ -8,7 +8,33 @@ class Axis implements \JsonSerializable {
 
 	private $data = [];
 
-	public function setyTickFormat($format)
+	public function setYTickValues($values)
+	{
+		if (!isset($this->data['y'])) {
+			$this->data['y'] = [];
+		}
+
+		if (!isset($this->data['y']['tick'])) {
+			$this->data['y']['tick'] = [];
+		}
+
+		$this->data['y']['tick']['values'] = $values;
+	}
+
+	public function setXTickValues($values)
+	{
+		if (!isset($this->data['x'])) {
+			$this->data['x'] = [];
+		}
+
+		if (!isset($this->data['x']['tick'])) {
+			$this->data['x']['tick'] = [];
+		}
+
+		$this->data['x']['tick']['values'] = $values;
+	}
+
+	public function setYTickFormat($format)
 	{
 		if (!isset($this->data['y'])) {
 			$this->data['y'] = [];
