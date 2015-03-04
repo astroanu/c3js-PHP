@@ -1,5 +1,5 @@
 {
-    "name": "astroanu/c3js-PHP",
+    "name": "astroanu/c3js-php",
     "description": "PHP library for c3js",
     "keywords": ["d3", "c3", "charts", "PHP"],
     "license": "MIT",
