@@ -7,7 +7,7 @@ class Axis implements \JsonSerializable {
 	const TYPE_INDEXED = 'indexed';
 
 	private $data = [];
-
+	
 	public function setYTickValues($values)
 	{
 		if (!isset($this->data['y'])) {

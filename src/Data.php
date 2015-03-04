@@ -16,6 +16,12 @@ class Data implements \JsonSerializable {
 
 	private $data = [];
 
+    public function setGroups($groups)
+    {
+        $this->data['groups'] = $groups;
+        return $this;
+    }
+
     /**
     * Set keys for x axis when axis x is on category type
     *

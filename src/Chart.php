@@ -35,7 +35,7 @@ class Chart {
             $this->data['color'] = [];
         }
 
-        $this->options['size']['pattern'] = $pattern;
+        $this->options['color']['pattern'] = $pattern;
         return $this;
     }
 
