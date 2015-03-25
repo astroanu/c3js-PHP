@@ -7,6 +7,32 @@ class Axis implements \JsonSerializable {
 	const TYPE_INDEXED = 'indexed';
 
 	private $data = [];
+
+	public function setXTickFit($fit)
+	{
+		if (!isset($this->data['x'])) {
+			$this->data['x'] = [];
+		}
+
+		if (!isset($this->data['x']['tick'])) {
+			$this->data['x']['tick'] = [];
+		}
+
+		$this->data['x']['tick']['fit'] = $fit;
+	}
+	
+	public function setYTickFit($fit)
+	{
+		if (!isset($this->data['y'])) {
+			$this->data['y'] = [];
+		}
+
+		if (!isset($this->data['y']['tick'])) {
+			$this->data['y']['tick'] = [];
+		}
+
+		$this->data['y']['tick']['fit'] = $fit;
+	}
 	
 	public function setYTickValues($values)
 	{
