@@ -277,6 +277,7 @@ class Chart {
 
         $body = str_replace('"function', 'function', $body);
         $body = str_replace('}"', '}', $body);
+        $body = str_replace('\/"', '/', $body);
 
         echo $body;
         
