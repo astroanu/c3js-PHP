@@ -16,7 +16,7 @@ class Chart {
             $this->data['padding'] = [];
         }
 
-        $this->options['padding']['top'] = $visibility;
+        $this->options['padding']['top'] = $padding;
         return $this;
     }
     
@@ -26,7 +26,7 @@ class Chart {
             $this->data['padding'] = [];
         }
 
-        $this->options['padding']['right'] = $visibility;
+        $this->options['padding']['right'] = $padding;
         return $this;
     }
     
@@ -36,7 +36,7 @@ class Chart {
             $this->data['padding'] = [];
         }
 
-        $this->options['padding']['bottom'] = $visibility;
+        $this->options['padding']['bottom'] = $padding;
         return $this;
     }
     
@@ -46,7 +46,7 @@ class Chart {
             $this->data['padding'] = [];
         }
 
-        $this->options['padding']['left'] = $visibility;
+        $this->options['padding']['left'] = $padding;
         return $this;
     }
     
