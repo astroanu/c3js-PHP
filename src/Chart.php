@@ -10,6 +10,45 @@ class Chart {
         return $this;
     }
 
+    public function setPaddingTop($padding)
+    {
+        if (!isset($this->data['padding'])) {
+            $this->data['padding'] = [];
+        }
+
+        $this->options['padding']['top'] = $visibility;
+        return $this;
+    }
+    
+    public function setPaddingRight($padding)
+    {
+        if (!isset($this->data['padding'])) {
+            $this->data['padding'] = [];
+        }
+
+        $this->options['padding']['right'] = $visibility;
+        return $this;
+    }
+    
+    public function setPaddingBottom($padding)
+    {
+        if (!isset($this->data['padding'])) {
+            $this->data['padding'] = [];
+        }
+
+        $this->options['padding']['bottom'] = $visibility;
+        return $this;
+    }
+    
+    public function setPaddingLeft($padding)
+    {
+        if (!isset($this->data['padding'])) {
+            $this->data['padding'] = [];
+        }
+
+        $this->options['padding']['left'] = $visibility;
+        return $this;
+    }
     
     public function setSubChartVisibility($visibility)
     {
