@@ -231,10 +231,15 @@ class Chart {
 		echo 'var ' . $var . ' = c3.generate(';
 
 		if ($pretty) {
-			echo json_encode($this->options, JSON_PRETTY_PRINT | JSON_NUMERIC_CHECK);	
+			$body =  json_encode($this->options, JSON_PRETTY_PRINT | JSON_NUMERIC_CHECK);	
 		} else {
-			echo json_encode($this->options, JSON_NUMERIC_CHECK);
+			$body =  json_encode($this->options, JSON_NUMERIC_CHECK);
 		}
+
+        $body = str_replace('"function', 'function', $body);
+        $body = str_replace('}"', '}', $body);
+
+        echo $body;
         
 		echo ');';
 	}

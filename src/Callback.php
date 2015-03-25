@@ -1,6 +1,6 @@
 <?php namespace Astroanu\C3jsPHP;
 
-class Callback {
+class Callback implements \JsonSerializable{
 
 	private $script;
 
@@ -19,7 +19,7 @@ class Callback {
         $this->script = $script;
     }
 
-    public function __toString()
+    public function JsonSerialize()
     {
     	return $this->script;
     }
