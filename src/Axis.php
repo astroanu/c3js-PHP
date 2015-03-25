@@ -8,6 +8,42 @@ class Axis implements \JsonSerializable {
 
 	private $data = [];
 
+	public function setXMin($min)
+	{
+		if (!isset($this->data['x'])) {
+			$this->data['x'] = [];
+		}
+
+		$this->data['x']['min'] = $min;
+	}	
+
+	public function setYMin($min)
+	{
+		if (!isset($this->data['y'])) {
+			$this->data['y'] = [];
+		}
+
+		$this->data['y']['min'] = $min;
+	}
+
+	public function setXMax($max)
+	{
+		if (!isset($this->data['x'])) {
+			$this->data['x'] = [];
+		}
+
+		$this->data['x']['max'] = $max;
+	}
+
+	public function setYMax($max)
+	{
+		if (!isset($this->data['y'])) {
+			$this->data['y'] = [];
+		}
+
+		$this->data['y']['max'] = $max;
+	}
+
 	public function setXTickFit($fit)
 	{
 		if (!isset($this->data['x'])) {
