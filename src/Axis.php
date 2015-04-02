@@ -44,6 +44,32 @@ class Axis implements \JsonSerializable {
 		$this->data['y']['max'] = $max;
 	}
 
+	public function setXTickCount($count)
+	{
+		if (!isset($this->data['x'])) {
+			$this->data['x'] = [];
+		}
+
+		if (!isset($this->data['x']['tick'])) {
+			$this->data['x']['tick'] = [];
+		}
+
+		$this->data['x']['tick']['count'] = $count;
+	}
+
+	public function setYTickCount($count)
+	{
+		if (!isset($this->data['y'])) {
+			$this->data['y'] = [];
+		}
+
+		if (!isset($this->data['y']['tick'])) {
+			$this->data['y']['tick'] = [];
+		}
+
+		$this->data['y']['tick']['count'] = $count;
+	}
+
 	public function setXTickFit($fit)
 	{
 		if (!isset($this->data['x'])) {
