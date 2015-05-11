@@ -8,6 +8,54 @@ class Axis implements \JsonSerializable {
 
 	private $data = [];
 
+	public function setYLabelPosition($const)
+	{
+		if (!isset($this->data['y'])) {
+			$this->data['y'] = [];
+		}		
+
+		if (!isset($this->data['y']['label'])) {
+			$this->data['y']['label'] = [];
+		}
+		$this->data['y']['label']['position'] = $const;
+	}
+
+	public function setYLabelText($text)
+	{
+		if (!isset($this->data['y'])) {
+			$this->data['y'] = [];
+		}		
+
+		if (!isset($this->data['y']['label'])) {
+			$this->data['y']['label'] = [];
+		}
+		$this->data['y']['label']['text'] = $text;
+	}
+
+	public function setXLabelPosition($const)
+	{
+		if (!isset($this->data['x'])) {
+			$this->data['x'] = [];
+		}		
+
+		if (!isset($this->data['x']['label'])) {
+			$this->data['x']['label'] = [];
+		}
+		$this->data['x']['label']['position'] = $const;
+	}
+
+	public function setXLabelText($text)
+	{
+		if (!isset($this->data['x'])) {
+			$this->data['x'] = [];
+		}		
+
+		if (!isset($this->data['x']['label'])) {
+			$this->data['x']['label'] = [];
+		}
+		$this->data['x']['label']['text'] = $text;
+	}
+
 	public function setXMin($min)
 	{
 		if (!isset($this->data['x'])) {
