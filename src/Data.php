@@ -72,6 +72,12 @@ class Data implements \JsonSerializable {
 		return $this;
 	}
 
+    public function setTypes($types)
+    {
+        $this->data['types'] = $types;
+        return $this;
+    }
+
     /**
     * Set custom data name
     *

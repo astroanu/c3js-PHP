@@ -275,6 +275,41 @@ class Axis implements \JsonSerializable {
 		$this->data['x']['show'] = $visibility;
 	}
 
+	public function setYVisibility($visibility)
+	{
+		if (!isset($this->data['y'])) {
+			$this->data['y'] = [];
+		}
+
+		$this->data['y']['show'] = $visibility;
+	}
+
+	public function setYTickRotate($angle)
+	{
+		if (!isset($this->data['y'])) {
+			$this->data['y'] = [];
+		}
+
+		if (!isset($this->data['y']['tick'])) {
+			$this->data['y']['tick'] = [];
+		}
+
+		$this->data['y']['tick']['rotate'] = $angle;
+	}
+
+	public function setXTickRotate($angle)
+	{
+		if (!isset($this->data['x'])) {
+			$this->data['x'] = [];
+		}
+
+		if (!isset($this->data['x']['tick'])) {
+			$this->data['x']['tick'] = [];
+		}
+
+		$this->data['x']['tick']['rotate'] = $angle;
+	}
+
 	public function setRotated($rotated)
 	{
 		$this->data['rotated'] = $rotated;
