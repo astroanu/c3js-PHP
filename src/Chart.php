@@ -257,6 +257,12 @@ class Chart {
 		return $this;
 	}
 
+    public function setLegend(Legend $legend)
+    {
+        $this->options['legend'] = $legend;
+        return $this;
+    }
+
     /**
      * Renders the javascript on to te html document
      *
