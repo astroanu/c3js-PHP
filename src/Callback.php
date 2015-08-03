@@ -1,15 +1,17 @@
-<?php namespace Astroanu\C3jsPHP;
+<?php
 
-class Callback implements \JsonSerializable{
+namespace Astroanu\C3jsPHP;
 
-	private $script;
+class Callback implements \JsonSerializable
+{
+    private $script;
 
-	public function __construct($script)
-	{
-		$this->script = $script;
-	}
+    public function __construct($script)
+    {
+        $this->script = $script;
+    }
 
-	public function getScript()
+    public function getScript()
     {
         return $this->script;
     }
@@ -21,6 +23,6 @@ class Callback implements \JsonSerializable{
 
     public function JsonSerialize()
     {
-    	return $this->script;
+        return $this->script;
     }
 }

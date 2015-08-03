@@ -1,20 +1,22 @@
-<?php namespace Astroanu\C3jsPHP;
+<?php
 
-class Legend implements \JsonSerializable {
+namespace Astroanu\C3jsPHP;
 
-	private $data = [];
+class Legend implements \JsonSerializable
+{
+    private $data = [];
 
-	public function setPosition($position)
-	{
-		$this->data['position'] = $position;		
-	}
+    public function setPosition($position)
+    {
+        $this->data['position'] = $position;
+    }
 
-	public function setVisibility($visibility)
-	{
-		$this->data['show'] = $visibility;
-	}
+    public function setVisibility($visibility)
+    {
+        $this->data['show'] = $visibility;
+    }
 
-	public function JsonSerialize()
+    public function JsonSerialize()
     {
         return $this->data;
     }

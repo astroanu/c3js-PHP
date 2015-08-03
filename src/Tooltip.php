@@ -1,10 +1,12 @@
-<?php namespace Astroanu\C3jsPHP;
+<?php
 
-class Tooltip implements \JsonSerializable {
+namespace Astroanu\C3jsPHP;
 
-	private $data = [];
+class Tooltip implements \JsonSerializable
+{
+    private $data = [];
 
-	public function JsonSerialize()
+    public function JsonSerialize()
     {
         return $this->data;
     }
