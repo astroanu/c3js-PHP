@@ -1,43 +1,45 @@
-<?php namespace Astroanu\C3jsPHP\Charts;
+<?php
 
-class Donut implements \JsonSerializable {
+namespace Astroanu\C3jsPHP\Charts;
 
-	private $data = [];
+class Donut implements \JsonSerializable
+{
+    private $data = [];
 
-	public function setTitle($title)
-	{
-		$this->data['title'] = $title;
-	}
+    public function setTitle($title)
+    {
+        $this->data['title'] = $title;
+    }
 
-	public function setWidth($width)
-	{
-		$this->data['width'] = $width;
-	}
+    public function setWidth($width)
+    {
+        $this->data['width'] = $width;
+    }
 
-	public function setExpand($expand)
-	{
-		$this->data['expand'] = $expand;
-	}
+    public function setExpand($expand)
+    {
+        $this->data['expand'] = $expand;
+    }
 
-	public function setLabeltThreshold($threshold)
-	{
-		if (!isset($this->data['label'])) {
-			$this->data['label'] = [];
-		}
-		
-		$this->data['label']['threshold'] = $threshold;
-	}	
+    public function setLabeltThreshold($threshold)
+    {
+        if (!isset($this->data['label'])) {
+            $this->data['label'] = [];
+        }
 
-	public function setLabelVisibility($visibility)
-	{
-		if (!isset($this->data['label'])) {
-			$this->data['label'] = [];
-		}
+        $this->data['label']['threshold'] = $threshold;
+    }
 
-		$this->data['label']['show'] = $visibility;
-	}
+    public function setLabelVisibility($visibility)
+    {
+        if (!isset($this->data['label'])) {
+            $this->data['label'] = [];
+        }
 
-	public function JsonSerialize()
+        $this->data['label']['show'] = $visibility;
+    }
+
+    public function JsonSerialize()
     {
         return $this->data;
     }

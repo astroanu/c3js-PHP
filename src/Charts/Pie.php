@@ -1,33 +1,35 @@
-<?php namespace Astroanu\C3jsPHP\Charts;
+<?php
 
-class Pie implements \JsonSerializable {
+namespace Astroanu\C3jsPHP\Charts;
 
-	private $data = [];
+class Pie implements \JsonSerializable
+{
+    private $data = [];
 
-	public function setExpand($expand)
-	{
-		$this->data['expand'] = $expand;
-	}
+    public function setExpand($expand)
+    {
+        $this->data['expand'] = $expand;
+    }
 
-	public function setLabeltThreshold($threshold)
-	{
-		if (!isset($this->data['label'])) {
-			$this->data['label'] = [];
-		}
-		
-		$this->data['label']['threshold'] = $threshold;
-	}	
+    public function setLabeltThreshold($threshold)
+    {
+        if (!isset($this->data['label'])) {
+            $this->data['label'] = [];
+        }
 
-	public function setLabelVisibility($visibility)
-	{
-		if (!isset($this->data['label'])) {
-			$this->data['label'] = [];
-		}
+        $this->data['label']['threshold'] = $threshold;
+    }
 
-		$this->data['label']['show'] = $visibility;
-	}
+    public function setLabelVisibility($visibility)
+    {
+        if (!isset($this->data['label'])) {
+            $this->data['label'] = [];
+        }
 
-	public function JsonSerialize()
+        $this->data['label']['show'] = $visibility;
+    }
+
+    public function JsonSerialize()
     {
         return $this->data;
     }

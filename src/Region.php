@@ -1,10 +1,12 @@
-<?php namespace Astroanu\C3jsPHP;
+<?php
 
-class Region implements \JsonSerializable {
+namespace Astroanu\C3jsPHP;
 
-	private $data = [];
+class Region implements \JsonSerializable
+{
+    private $data = [];
 
-	public function JsonSerialize()
+    public function JsonSerialize()
     {
         return $this->data;
     }

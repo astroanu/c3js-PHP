@@ -2,7 +2,7 @@
 
 // http://c3js.org/samples/simple_multiple.html
 
-require(__DIR__ . '/../bootstrap.php'); 
+require __DIR__.'/../bootstrap.php';
 
 $chart = new Astroanu\C3jsPHP\Chart();
 
@@ -10,7 +10,7 @@ $data = new Astroanu\C3jsPHP\Data();
 
 $data->setColumns([
             ['data1', 30, 200, 100, 400, 150, 250],
-            ['data2', 50, 20, 10, 40, 15, 25]
+            ['data2', 50, 20, 10, 40, 15, 25],
         ]);
 
 $chart->setData($data);

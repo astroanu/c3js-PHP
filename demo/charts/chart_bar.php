@@ -2,7 +2,7 @@
 
 // http://c3js.org/samples/chart_bar.html
 
-require(__DIR__ . '/../bootstrap.php'); 
+require __DIR__.'/../bootstrap.php';
 
 $chart = new Astroanu\C3jsPHP\Chart();
 
@@ -12,7 +12,7 @@ $bar = new Astroanu\C3jsPHP\Charts\Bar();
 
 $data->setColumns([
             ['data1', 30, 200, 100, 400, 150, 250],
-            ['data2', 130, 100, 140, 200, 150, 50]
+            ['data2', 130, 100, 140, 200, 150, 50],
         ]);
 
 $data->setType(Astroanu\C3jsPHP\Data::TYPE_BAR);

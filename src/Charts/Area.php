@@ -1,15 +1,17 @@
-<?php namespace Astroanu\C3jsPHP\Charts;
+<?php
 
-class Area implements \JsonSerializable {
+namespace Astroanu\C3jsPHP\Charts;
 
-	private $data = [];
+class Area implements \JsonSerializable
+{
+    private $data = [];
 
-	public function setZerobased($zerobased)
-	{
-		$this->data['zerobased'] = $zerobased;
-	}
+    public function setZerobased($zerobased)
+    {
+        $this->data['zerobased'] = $zerobased;
+    }
 
-	public function JsonSerialize()
+    public function JsonSerialize()
     {
         return $this->data;
     }
