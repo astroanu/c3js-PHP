@@ -1,15 +1,37 @@
-<?php namespace Astroanu\C3jsPHP\Charts;
+<?php
+/*
+ * Copyright (C) 2015 Raphaël Doursenaud <rdoursenaud@gpcsolutions.fr>
+ */
 
-class Area implements \JsonSerializable {
+namespace Astroanu\C3jsPHP\Charts;
 
-	private $data = [];
+/**
+ * Class Area
+ * @package Astroanu\C3jsPHP\Charts
+ */
+class Area implements \JsonSerializable
+{
+    /**
+     * @var array
+     */
+    private $data = [];
 
-	public function setZerobased($zerobased)
-	{
-		$this->data['zerobased'] = $zerobased;
-	}
+    /**
+     * Set if min or max value will be 0 on area chart
+     *
+     * @param bool $zerobased
+     *
+     * @link http://c3js.org/reference.html#area-zerobased
+     */
+    public function setZerobased($zerobased = true)
+    {
+        $this->data['zerobased'] = $zerobased;
+    }
 
-	public function JsonSerialize()
+    /**
+     * @return array
+     */
+    public function JsonSerialize()
     {
         return $this->data;
     }
