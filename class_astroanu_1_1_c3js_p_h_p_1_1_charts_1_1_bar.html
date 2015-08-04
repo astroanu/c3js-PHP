@@ -48,7 +48,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Data&#160;Structures</span></a></li>
-      <li><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -116,14 +115,14 @@ $(document).ready(function(){initNavTree('class_astroanu_1_1_c3js_p_h_p_1_1_char
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa4bd7ef0c34ccd60e534dc89d3a304f8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_astroanu_1_1_c3js_p_h_p_1_1_charts_1_1_bar.html#aa4bd7ef0c34ccd60e534dc89d3a304f8">setZerobased</a> ($zerobased)</td></tr>
-<tr class="separator:aa4bd7ef0c34ccd60e534dc89d3a304f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af4848dde6645149c5c57361e5b15cc74"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_astroanu_1_1_c3js_p_h_p_1_1_charts_1_1_bar.html#af4848dde6645149c5c57361e5b15cc74">setWidthRatio</a> ($ratio)</td></tr>
-<tr class="separator:af4848dde6645149c5c57361e5b15cc74"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adb2ef71e95464b35945ff9f67e4d6e44"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_astroanu_1_1_c3js_p_h_p_1_1_charts_1_1_bar.html#adb2ef71e95464b35945ff9f67e4d6e44">setWidth</a> ($width)</td></tr>
-<tr class="separator:adb2ef71e95464b35945ff9f67e4d6e44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b32cac8b854e2a010208d0f87f567f8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_astroanu_1_1_c3js_p_h_p_1_1_charts_1_1_bar.html#a2b32cac8b854e2a010208d0f87f567f8">JsonSerialize</a> ()</td></tr>
 <tr class="separator:a2b32cac8b854e2a010208d0f87f567f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb2ef71e95464b35945ff9f67e4d6e44"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_astroanu_1_1_c3js_p_h_p_1_1_charts_1_1_bar.html#adb2ef71e95464b35945ff9f67e4d6e44">setWidth</a> ($width)</td></tr>
+<tr class="separator:adb2ef71e95464b35945ff9f67e4d6e44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4848dde6645149c5c57361e5b15cc74"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_astroanu_1_1_c3js_p_h_p_1_1_charts_1_1_bar.html#af4848dde6645149c5c57361e5b15cc74">setWidthRatio</a> ($ratio)</td></tr>
+<tr class="separator:af4848dde6645149c5c57361e5b15cc74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e273227ed8794090913287c559af1ec"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_astroanu_1_1_c3js_p_h_p_1_1_charts_1_1_bar.html#a5e273227ed8794090913287c559af1ec">setZerobased</a> ($zerobased=true)</td></tr>
+<tr class="separator:a5e273227ed8794090913287c559af1ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a2b32cac8b854e2a010208d0f87f567f8"></a>
@@ -138,6 +137,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>array </dd></dl>
 
 </div>
 </div>
@@ -154,6 +154,13 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Change the width of bar chart</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype">int</td><td class="paramname">$width</td><td><a class="el" href="">http://c3js.org/reference.html#bar-width</a></td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -170,10 +177,17 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Change the width of bar chart by ratio</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype">float</td><td class="paramname">$ratio</td><td><a class="el" href="">http://c3js.org/reference.html#bar-width-ratio</a></td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
-<a class="anchor" id="aa4bd7ef0c34ccd60e534dc89d3a304f8"></a>
+<a class="anchor" id="a5e273227ed8794090913287c559af1ec"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -181,24 +195,28 @@ Public Member Functions</h2></td></tr>
           <td class="memname">setZerobased </td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>$zerobased</em></td><td>)</td>
+          <td class="paramname"><em>$zerobased</em> = <code>true</code></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Set if min or max value will be 0 on bar chart</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype">bool</td><td class="paramname">$zerobased</td><td><a class="el" href="">http://c3js.org/reference.html#bar-zerobased</a></td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li>D:/www/laravel-dev/Lib/astroanu/c3js-php/src/Charts/<a class="el" href="_bar_8php.html">Bar.php</a></li>
-</ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespace_astroanu.html">Astroanu</a></li><li class="navelem"><a class="el" href="namespace_astroanu_1_1_c3js_p_h_p.html">C3jsPHP</a></li><li class="navelem"><a class="el" href="namespace_astroanu_1_1_c3js_p_h_p_1_1_charts.html">Charts</a></li><li class="navelem"><a class="el" href="class_astroanu_1_1_c3js_p_h_p_1_1_charts_1_1_bar.html">Bar</a></li>
-    <li class="footer">Generated on Fri Feb 27 2015 13:21:53 for c3js-PHP by
+    <li class="footer">Generated on Tue Aug 4 2015 15:27:08 for c3js-PHP by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

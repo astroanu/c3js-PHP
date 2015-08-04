@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['render',['render',['../class_astroanu_1_1_c3js_p_h_p_1_1_chart.html#a45cafd23628a88301fd4f454fc99cc6f',1,'Astroanu::C3jsPHP::Chart']]]
+  ['bindto',['bindTo',['../class_astroanu_1_1_c3js_p_h_p_1_1_chart.html#a3db18b6fb0f42716c3c8736ada0e335a',1,'Astroanu::C3jsPHP::Chart']]]
 ];

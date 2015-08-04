@@ -3,6 +3,7 @@ var hierarchy =
     [ "Chart", "class_astroanu_1_1_c3js_p_h_p_1_1_chart.html", null ],
     [ "JsonSerializable", null, [
       [ "Axis", "class_astroanu_1_1_c3js_p_h_p_1_1_axis.html", null ],
+      [ "Callback", "class_astroanu_1_1_c3js_p_h_p_1_1_callback.html", null ],
       [ "Area", "class_astroanu_1_1_c3js_p_h_p_1_1_charts_1_1_area.html", null ],
       [ "Bar", "class_astroanu_1_1_c3js_p_h_p_1_1_charts_1_1_bar.html", null ],
       [ "Donut", "class_astroanu_1_1_c3js_p_h_p_1_1_charts_1_1_donut.html", null ],
@@ -14,6 +15,8 @@ var hierarchy =
       [ "Legend", "class_astroanu_1_1_c3js_p_h_p_1_1_legend.html", null ],
       [ "Point", "class_astroanu_1_1_c3js_p_h_p_1_1_point.html", null ],
       [ "Region", "class_astroanu_1_1_c3js_p_h_p_1_1_region.html", null ],
-      [ "Tooltip", "class_astroanu_1_1_c3js_p_h_p_1_1_tooltip.html", null ]
+      [ "Subchart", "class_astroanu_1_1_c3js_p_h_p_1_1_subchart.html", null ],
+      [ "Tooltip", "class_astroanu_1_1_c3js_p_h_p_1_1_tooltip.html", null ],
+      [ "Zoom", "class_astroanu_1_1_c3js_p_h_p_1_1_zoom.html", null ]
     ] ]
 ];
