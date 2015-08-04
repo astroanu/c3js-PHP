@@ -86,7 +86,10 @@ class Chart
      */
     public function setSizeHeight($height)
     {
-        $this->ensureSize();
+        if (!isset($this->data['size'])) {
+            $this->data['size'] = [];
+        }
+
         $this->options['size']['height'] = $height;
         return $this;
     }
@@ -338,10 +341,28 @@ class Chart
      * @param Region $region
      *
      * @return Chart
+     *
+     * @see setRegions()
      */
-    public function setRegion(Region $region)
+    public function addRegion(Region $region)
     {
-        $this->options['regions'] = $region;
+        $this->ensureRegions();
+        $this->options['regions'][] = $region;
+        return $this;
+    }
+
+    /**
+     * Set Chart Regions
+     *
+     * @param Region[] $regions
+     *
+     * @return Chart
+     *
+     * @see addRegion()
+     */
+    public function setRegions($regions) {
+        $this->ensureRegions();
+        $this->options['regions'] = $regions;
         return $this;
     }
 
@@ -527,6 +548,13 @@ class Chart
     {
         if (!isset($this->data['padding'])) {
             $this->data['padding'] = [];
+        }
+    }
+
+    private function ensureRegions()
+    {
+        if (!isset($this->data['regions'])) {
+            $this->data['regions'] = [];
         }
     }
 }

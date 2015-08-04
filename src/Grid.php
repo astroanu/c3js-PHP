@@ -1,80 +1,101 @@
-<?php namespace Astroanu\C3jsPHP;
+<?php
+/*
+ * Copyright (C) 2015 Raphaël Doursenaud <rdoursenaud@gpcsolutions.fr>
+ */
 
-class Grid implements \JsonSerializable {
+namespace Astroanu\C3jsPHP;
 
-	private $data = [];
+/**
+ * Class Grid
+ * @package Astroanu\C3jsPHP
+ */
+class Grid implements \JsonSerializable
+{
+    /**
+     * @var array
+     */
+    private $data = [];
 
     /**
-    * Set additional grid lines along x
-    *
-    * @param array $lines
-    *
-    * @return Grid
-    *
-    */
-	public function setXLines($lines)
-	{
-		if (!isset($this->data['x'])) {
-			$this->data['x'] = [];
-		}
-
-		$this->data['x']['lines'] = $lines;
-	}
+     * Show grids along x axis
+     *
+     * @param boolean $visibility
+     *
+     * @return Grid
+     *
+     * @link http://c3js.org/reference.html#grid-x-show
+     */
+    public function setXVisibility($visibility = false)
+    {
+        $this->ensureX();
+        $this->data['x']['show'] = $visibility;
+    }
 
     /**
-    * Set additional grid lines along y 
-    *
-    * @param array $lines
-    *
-    * @return Grid
-    *
-    */
-	public function setYLines($lines)
-	{
-		if (!isset($this->data['y'])) {
-			$this->data['y'] = [];
-		}
-
-		$this->data['y']['lines'] = $lines;
-	}
+     * Set additional grid lines along x axis
+     *
+     * @param array $lines
+     *
+     * @return Grid
+     *
+     * @link http://c3js.org/reference.html#grid-x-lines
+     */
+    public function setXLines($lines)
+    {
+        $this->ensureX();
+        $this->data['x']['lines'] = $lines;
+    }
 
     /**
-    * Set visibility of grid liness along y axis
-    *
-    * @param boolean $visibility
-    *
-    * @return Grid
-    *
-    */
-	public function setYVisibility($visibility)
-	{
-		if (!isset($this->data['y'])) {
-			$this->data['y'] = [];
-		}
-
-		$this->data['y']['show'] = $visibility;
-	}
-
+     * Show grids along y axis
+     *
+     * @param boolean $visibility
+     *
+     * @return Grid
+     *
+     * @link http://c3js.org/reference.html#grid-y-show
+     */
+    public function setYVisibility($visibility = false)
+    {
+        $this->ensureY();
+        $this->data['y']['show'] = $visibility;
+    }
 
     /**
-    * Set visibility of grid liness along x axis
-    *
-    * @param boolean $visibility
-    *
-    * @return Grid
-    *
-    */
-    public function setXVisibility($visibility)
-	{
-		if (!isset($this->data['x'])) {
-			$this->data['x'] = [];
-		}
+     * Set additional grid lines along y axis
+     *
+     * @param array $lines
+     *
+     * @return Grid
+     *
+     * @link http://c3js.org/reference.html#grid-y-lines
+     */
+    public function setYLines($lines)
+    {
+        $this->ensureY();
 
-		$this->data['x']['show'] = $visibility;
-	}
+        $this->data['y']['lines'] = $lines;
+    }
 
-	public function JsonSerialize()
+    /**
+     * @return array
+     */
+    public function JsonSerialize()
     {
         return $this->data;
+    }
+
+    private function ensureX()
+    {
+        if (!isset($this->data['x'])) {
+            $this->data['x'] = [];
+        }
+    }
+
+    private function ensureY()
+    {
+        if (!isset($this->data['y'])) {
+            $this->data['y'] = [];
+        }
     }
 }
