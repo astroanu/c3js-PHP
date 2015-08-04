@@ -1,25 +1,61 @@
-<?php namespace Astroanu\C3jsPHP\Charts;
+<?php
+/*
+ * Copyright (C) 2015 Raphaël Doursenaud <rdoursenaud@gpcsolutions.fr>
+ */
 
-class Bar implements \JsonSerializable {
+namespace Astroanu\C3jsPHP\Charts;
 
-	private $data = [];
+/**
+ * Class Bar
+ * @package Astroanu\C3jsPHP\Charts
+ */
+class Bar implements \JsonSerializable
+{
+    /**
+     * @var array
+     */
+    private $data = [];
 
-	public function setZerobased($zerobased)
-	{
-		$this->data['zerobased'] = $zerobased;
-	}
+    /**
+     * Change the width of bar chart
+     *
+     * @param int $width
+     *
+     * @link http://c3js.org/reference.html#bar-width
+     */
+    public function setWidth($width)
+    {
+        $this->data['width'] = $width;
+    }
 
-	public function setWidthRatio($ratio)
-	{
-		$this->data['ratio'] = $ratio;
-	}
+    /**
+     * Change the width of bar chart by ratio
+     *
+     * @param float $ratio
+     *
+     * @link http://c3js.org/reference.html#bar-width-ratio
+     */
+    public function setWidthRatio($ratio)
+    {
+        $this->data['ratio'] = $ratio;
+    }
 
-	public function setWidth($width)
-	{
-		$this->data['width'] = $width;
-	}
+    /**
+     * Set if min or max value will be 0 on bar chart
+     *
+     * @param bool $zerobased
+     *
+     * @link http://c3js.org/reference.html#bar-zerobased
+     */
+    public function setZerobased($zerobased = true)
+    {
+        $this->data['zerobased'] = $zerobased;
+    }
 
-	public function JsonSerialize()
+    /**
+     * @return array
+     */
+    public function JsonSerialize()
     {
         return $this->data;
     }
