@@ -546,7 +546,7 @@ class Axis implements \JsonSerializable
     public function setY2Visibility($visibility = false)
     {
         $this->ensureY2();
-        $this-['y2']['show'] = $visibility;
+        $this->data['y2']['show'] = $visibility;
     }
 
     /**
