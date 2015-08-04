@@ -1,4 +1,7 @@
 <?php namespace Astroanu\C3jsPHP;
+/*
+ * Copyright (C) 2015 Raphaël Doursenaud <rdoursenaud@gpcsolutions.fr>
+ */
 
 class Data implements \JsonSerializable {
 
@@ -13,6 +16,8 @@ class Data implements \JsonSerializable {
 	const TYPE_PIE = 'pie';
 	const TYPE_DONUT = 'donut';
 	const TYPE_GAUGE = 'gauge';
+
+	const MIMETYPE_JSON = 'json';
 
 	private $data = [];
 
@@ -163,21 +168,41 @@ class Data implements \JsonSerializable {
 	}
 
     /**
-    * Set chart data from a json or csv file
-    *
-    * @param string $url
-    *
-    * @return Data
-    *
-    */
-	public function setUrl($url)
-	{
-		$this->data['url'] = $url;
-		return $this;
-	}
+     * Set chart data from a json or csv file
+     *
+     * @param string $url
+     *
+     * @return Data
+     * 
+     * @link http://c3js.org/reference.html#data-url
+     *
+     * @see setMimeType()
+     */
+    public function setUrl($url)
+    {
+        $this->data['url'] = $url;
+        return $this;
+    }
 
 	public function JsonSerialize()
     {
         return $this->data;
+    }
+
+    /**
+     * Set data URL MIME type
+     *
+     * @param string $mime Data URL mime type
+     *
+     * @return Data
+     *
+     * @link http://c3js.org/reference.html#data-mimeType
+     *
+     * @see setUrl()
+     */
+    public function setMimeType($mime = self::MIMETYPE_JSON)
+    {
+        $this->data['mimeType'] = $mime;
+        return $this;
     }
 }
