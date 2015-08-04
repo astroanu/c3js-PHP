@@ -510,16 +510,16 @@ class Chart
     }
 
     /**
-     * Renders the javascript onto the HTML document
+     * Get the rendered JavaScript
      *
      * @param string $var (optional) Returning javascript variable name
      * @param bool $pretty (optional) Render prettyfied javascript
      *
-     * @return Chart
+     * @return string
      */
-    public function render($var = 'chart', $pretty = false)
+    public function getRendering($var = 'chart', $pretty = false)
     {
-        echo 'var ' . $var . ' = c3.generate(';
+        $result = 'var ' . $var . ' = c3.generate(';
 
         if ($pretty) {
             $body = json_encode($this->options, JSON_PRETTY_PRINT | JSON_NUMERIC_CHECK);
@@ -532,9 +532,22 @@ class Chart
         $body = str_replace('\/', '/', $body);
         $body = str_replace('\"', '"', $body);
 
-        echo $body;
+        $result .= $body;
 
-        echo ');';
+        $result .= ');';
+
+        return $result;
+    }
+
+    /**
+     * Renders the JavaScript directly onto the HTML document
+     *
+     * @param string $var (optional) Returning javascript variable name
+     * @param bool $pretty (optional) Render prettyfied javascript
+     */
+    public function render($var = 'chart', $pretty = false)
+    {
+        echo $this->getRendering($var, $pretty);
     }
 
     private function ensureSize()
