@@ -18,7 +18,7 @@ class Line implements \JsonSerializable
     /**
      * @var array
      */
-    private $data = [];
+    protected $data = [];
 
     /**
      * Set if null data point will be connected or not

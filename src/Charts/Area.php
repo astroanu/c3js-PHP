@@ -14,7 +14,7 @@ class Area implements \JsonSerializable
     /**
      * @var array
      */
-    private $data = [];
+    protected $data = [];
 
     /**
      * Set if min or max value will be 0 on area chart

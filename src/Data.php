@@ -31,7 +31,7 @@ class Data implements \JsonSerializable
     /**
      * @var array
      */
-    private $data = [];
+    protected $data = [];
 
     /**
      * Set chart data from a JSON or CSV file

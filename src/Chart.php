@@ -14,35 +14,35 @@ class Chart
     /**
      * @var array
      */
-    private $options = [];
+    protected $options = [];
     /**
      * @var Data
      */
-    private $data;
+    protected $data;
     /**
      * @var Callback
      */
-    private $oninit;
+    protected $oninit;
     /**
      * @var Callback
      */
-    private $onrendered;
+    protected $onrendered;
     /**
      * @var Callback
      */
-    private $onmouseover;
+    protected $onmouseover;
     /**
      * @var Callback
      */
-    private $onmouseout;
+    protected $onmouseout;
     /**
      * @var Callback
      */
-    private $onresize;
+    protected $onresize;
     /**
      * @var Callback
      */
-    private $onresized;
+    protected $onresized;
 
     /**
      * The CSS selector or the element which the chart will be set to

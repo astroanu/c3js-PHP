@@ -14,7 +14,7 @@ class Pie implements \JsonSerializable
     /**
      * @var array
      */
-    private $data = [];
+    protected $data = [];
 
     /**
      * Show or hide label on each pie piece

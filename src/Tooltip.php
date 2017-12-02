@@ -14,7 +14,7 @@ class Tooltip implements \JsonSerializable
     /**
      * @var array
      */
-    private $data = [];
+    protected $data = [];
 
     /**
      * Show or hide tooltip

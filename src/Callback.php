@@ -14,7 +14,7 @@ class Callback implements \JsonSerializable
     /**
      * @var string
      */
-    private $script;
+    protected $script;
 
     /**
      * @param string $script

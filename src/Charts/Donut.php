@@ -14,7 +14,7 @@ class Donut implements \JsonSerializable
     /**
      * @var array
      */
-    private $data = [];
+    protected $data = [];
 
     /**
      * Show or hide label on each donut piece

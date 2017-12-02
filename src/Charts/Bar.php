@@ -14,7 +14,7 @@ class Bar implements \JsonSerializable
     /**
      * @var array
      */
-    private $data = [];
+    protected $data = [];
 
     /**
      * Change the width of bar chart
