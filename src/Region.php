@@ -22,7 +22,7 @@ class Region implements \JsonSerializable
     /**
      * @var array
      */
-    private $data = [];
+    protected $data = [];
 
     /**
      * @param AXIS_X|AXIS_Y|AXIS_Y2 $axis

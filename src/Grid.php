@@ -14,7 +14,7 @@ class Grid implements \JsonSerializable
     /**
      * @var array
      */
-    private $data = [];
+    protected $data = [];
 
     /**
      * Show grids along x axis

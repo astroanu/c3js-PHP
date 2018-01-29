@@ -14,7 +14,7 @@ class Point implements \JsonSerializable
     /**
      * @var array
      */
-    private $data = [];
+    protected $data = [];
 
     /**
      * Whether to show each point in line

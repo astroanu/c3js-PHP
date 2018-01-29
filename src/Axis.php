@@ -32,7 +32,7 @@ class Axis implements \JsonSerializable
     /**
      * @var array
      */
-    private $data = [];
+    protected $data = [];
 
     /**
      * Switch x and y axis position

@@ -16,7 +16,7 @@ class Subchart implements \JsonSerializable
     /**
      * @var array
      */
-    private $data = [];
+    protected $data = [];
 
     /**
      * Show sub chart on the bottom of the chart

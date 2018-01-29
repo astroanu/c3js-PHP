@@ -16,7 +16,7 @@ class Zoom implements \JsonSerializable
     /**
      * @var array
      */
-    private $data = [];
+    protected $data = [];
 
     /**
      * Enable zooming
